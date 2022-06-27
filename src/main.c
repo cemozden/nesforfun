@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "file_utils.h"
 
 void print_help();
 
@@ -9,6 +10,11 @@ int main(int argc, char** argv) {
     }
 
     const char* rom_path = argv[1];
+
+    if (!check_file_exist(rom_path)) {
+        printf("ROM file does not exist! Exiting...");
+        return -2;
+    }
 
     printf("ROM Path: %s\n", rom_path);
 
