@@ -7,7 +7,7 @@
 #endif
 
 
-bool check_file_exist(const char* file_path) {
+const bool check_file_exist(const char* file_path) {
     if (access(file_path, F_OK) == 0) return true;
     else return false;
 }

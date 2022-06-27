@@ -4,6 +4,6 @@
 #include <stdbool.h>
 
 
-bool check_file_exist(const char* file_path);
+const bool check_file_exist(const char* file_path);
 
 #endif
